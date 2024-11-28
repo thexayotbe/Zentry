@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import { Button } from "./ui/Button";
-
 gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -21,7 +20,6 @@ const Hero = () => {
     setHasClicked(true);
     setCurrentIndex(upcomingVideoIndex);
   };
-
   useGSAP(
     () => {
       if (hasClicked) {
@@ -35,7 +33,6 @@ const Hero = () => {
           ease: "power1.inOut",
           onStart: () => nextVdRef.current.play(),
         });
-
         gsap.from("#current-video", {
           transformOrigin: "center center",
           scale: 0,
@@ -64,7 +61,6 @@ const Hero = () => {
       },
     });
   });
-
   useEffect(() => {
     if (loadedVideos === totalVideos - 1) {
       setIsLoading(false);
@@ -132,7 +128,6 @@ const Hero = () => {
             <h1 className="special-font hero-heading text-blue-100">
               redefi<b>n</b>e
             </h1>
-
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
               Enter the Metagame Layer <br /> Unleash the Play Economy
             </p>
