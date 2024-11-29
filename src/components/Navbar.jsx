@@ -13,7 +13,6 @@ const Navbar = () => {
   const audioELementRef = useRef(null);
 
   const { y: currentScrollY } = useWindowScroll();
-
   useEffect(() => {
     if (currentScrollY === 0) {
       setIsNavVisible(true);
